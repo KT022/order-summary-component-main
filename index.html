@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --p-blue: hsl(225, 100%, 94%);
+        --b-blue: hsl(245, 75%, 52%);
+        --vp-blue: hsl(225, 100%, 98%);
+        --de-blue: hsl(224, 23%, 55%);
+        --da-blue: hsl(223, 47%, 23%);
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;500&family=Outfit:wght@300;400;600;700&family=Red+Hat+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            'red':['Red Hat Display', 'sans-serif'],
+          },
+
+          extend: {
+            screen: {
+              'su-sm': '300px',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+
+  <body class="bg-[color:var(--p-blue)]">
+    <main
+      class="container mx-auto bg-[color:var(--p-blue)] flex justify-center h-screen w-screen items-center"
+    >
+      <div class="card flex flex-col bg-white mx-6 rounded-3xl max-w-[350px]">
+        <div class="picture">
+          <img
+            class="rounded-t-3xl w-full"
+            src="./images/illustration-hero.svg"
+            alt=""
+          />
+        </div>
+
+        <!-- info -->
+        <div class="info flex flex-col mx-4">
+          <h2
+            class="text-center font-red text-2xl font-bold text-[color:var(--da-blue)] mt-5"
+          >
+            Order Summary
+          </h2>
+          <p class="text-center text-base mt-3 text-[color:var(--de-blue)]">
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
+          <div class="plan flex flex-wrap su-sm:flex-none bg-[color:var(--vp-blue)] rounded-md mt-5 items-center">
+            <img class='p-4' src="./images/icon-music.svg" alt="" />
+            <div class="flex-col justify-center ">
+              <h5 class="text-sm font-bold">Annual Plan</h5>
+              <p class="text-sm">$59.99/year</p>
+            </div>
+            <a href="#" class="ml-[50px] md:ml-[60px] underline font-semibold cursor-pointer">Change</a>
+          </div>
+          <button class="py-4 bg-[color:var(--b-blue)] w-full rounded-xl mt-5 hover:opacity-70"><a href="#" class="text-white font-red">Proceed to Payment</a></button>
+          <button class="py-4 w-full rounded-xl my-3"><a href="#" class="text-[color:var(--de-blue)] font-red">Cancel Order</a></button>
+        </div>
+      </div>
+    </main>
+    <!-- Order Summary
+
+  You can now listen to millions of songs, audiobooks, and podcasts on any 
+  device anywhere you like!
+
+  Annual Plan
+  $59.99/year
+
+  Change
+
+  Proceed to Payment
+  Cancel Order
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
